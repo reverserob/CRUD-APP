@@ -58,11 +58,11 @@ class TasksController extends Controller
 
         Task::create($input);
 
-        Session::flash('flash_message', 'Task successfully added!');
+       // Session::flash('flash_message', 'Task successfully added!');
 
        // return redirect()->back();
 
-        return view('tasks.show');
+        return redirect()->route('tasks.index');
 
     }
 
